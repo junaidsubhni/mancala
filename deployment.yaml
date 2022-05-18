@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: actuator-sample
-          image: registry.gitlab.com/bolcom/junaid-subhani
+          image: registry.gitlab.com/bolcom/junaid-subhani/mancala
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
