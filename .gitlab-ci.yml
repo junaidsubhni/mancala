@@ -22,14 +22,14 @@ maven-build:
 docker-build:
   stage: package
   script:
-    - docker build -t mancala .
+    - docker build -t registry.gitlab.com/bolcom/junaid-subhani/mancala .
     - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
-    - docker push mancala
+    - docker push registry.gitlab.com/bolcom/junaid-subhani/mancala
 
 k8s-deploy:
   image: google/cloud-sdk
   stage: deploy
   script:
     - echo "Deploying application..."
-    - docker run --rm -p 8080:8080 mancala
+    - docker run --rm -p 8080:8080 registry.gitlab.com/bolcom/junaid-subhani/mancala
     - echo "Application successfully deployed."
