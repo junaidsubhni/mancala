@@ -22,9 +22,9 @@ maven-build:
 docker-build:
   stage: package
   script:
-    - docker build -t registry.gitlab.com/bolcom/junaid-subhani/mancala .
+    - docker build -t mancala .
     - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
-    - docker push registry.gitlab.com/bolcom/junaid-subhani/mancala
+    - docker push mancala
 
 k8s-deploy:
   image: google/cloud-sdk
