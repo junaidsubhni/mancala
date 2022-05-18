@@ -31,5 +31,5 @@ k8s-deploy:
   stage: deploy
   script:
     - echo "Deploying application..."
-    - docker run --rm -p 8080:8080 registry.gitlab.com/bolcom/junaid-subhani/mancala
+    - docker run -d --rm -p 8080:8080 registry.gitlab.com/bolcom/junaid-subhani/mancala
     - echo "Application successfully deployed."
