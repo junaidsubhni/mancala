@@ -22,7 +22,8 @@ public class MancalaGame {
         this.pits = Arrays.asList(
                 new MancalaPit(1, pitStones),
                 new MancalaPit(2, pitStones),
-                new MancalaPit(3, pitStones));
+                new MancalaPit(3, pitStones),
+                new MancalaPit(4, pitStones));
         this.id = id;
     }
 }
