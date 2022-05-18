@@ -30,6 +30,5 @@ k8s-deploy:
   image: google/cloud-sdk
   stage: deploy
   script:
-    - echo "$GOOGLE_KEY" > key.json
     - echo "Deploying application..."
     - echo "Application successfully deployed."
