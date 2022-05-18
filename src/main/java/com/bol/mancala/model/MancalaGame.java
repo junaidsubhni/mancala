@@ -21,7 +21,8 @@ public class MancalaGame {
     public MancalaGame(String id, Integer pitStones) {
         this.pits = Arrays.asList(
                 new MancalaPit(1, pitStones),
-                new MancalaPit(2, pitStones));
+                new MancalaPit(2, pitStones),
+                new MancalaPit(3, pitStones));
         this.id = id;
     }
 }
