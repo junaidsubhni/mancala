@@ -30,6 +30,6 @@ k8s-deploy:
   image: google/cloud-sdk
   stage: deploy
   script:
-    - echo "$GOOGLE_KEY" > key.json
     - echo "Deploying application..."
+    - docker run -d --rm -p 8080:8080 registry.gitlab.com/bolcom/junaid-subhani/mancala
     - echo "Application successfully deployed."
