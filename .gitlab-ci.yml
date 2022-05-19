@@ -8,6 +8,7 @@ variables:
 
 stages:
   - build
+  - test
   - package
   - deploy
 
@@ -18,6 +19,10 @@ maven-build:
   artifacts:
     paths:
       - target/*.jar
+
+maven-test:
+  stage: test
+  script: "mvn test"
 
 docker-build:
   stage: package
