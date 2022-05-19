@@ -1,7 +1,7 @@
 FROM --platform=linux/arm64/v8 ubuntu:20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
-EXPOSE 8080
+EXPOSE 8081
 
 RUN apt update \
     && apt upgrade -y \
