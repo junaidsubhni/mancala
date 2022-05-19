@@ -7,8 +7,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Arrays;
 import java.util.List;
 
-@Document
+@Document(collection = "games")
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class MancalaGame {
     @Id
