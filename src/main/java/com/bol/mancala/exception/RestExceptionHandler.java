@@ -37,4 +37,18 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
                 .build();
         return handleExceptionInternal(ex, errorModel, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
     }
+
+    @ExceptionHandler(value = {ResourceNotFoundException.class})
+    @ResponseBody
+    protected ResponseEntity<Object> handleResourceNotFoundException(
+            RuntimeException ex, WebRequest request) {
+
+        ResourceNotFoundException mancalaException = (ResourceNotFoundException) ex;
+
+        ErrorModel errorModel = ErrorModel.builder()
+                .message(mancalaException.getMessage())
+                .code("Resource_Not_FoundException")
+                .build();
+        return handleExceptionInternal(ex, errorModel, new HttpHeaders(), HttpStatus.NOT_FOUND, request);
+    }
 }
